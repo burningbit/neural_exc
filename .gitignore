@@ -1,2 +1,5 @@
 # Ignore emacs autosave files
 *~
+*.pyc
+\#*
+.\#*
