@@ -37,7 +37,7 @@ class Network(object):
     """
     An attempt to implement Stochastic Gradient Descent
     """
-    def SGD(self, training_data, epochs=60, mini_batch_size=10, eta=0.261):
+    def SGD(self, training_data, epochs=60, mini_batch_size=10, eta=0.1):
         total_iterations = (len(training_data) / mini_batch_size) * epochs
         for _ in range(epochs):
             random.shuffle(training_data)
