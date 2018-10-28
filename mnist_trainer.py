@@ -12,7 +12,7 @@ resource_path = 'res'
 mndata = MNIST(os.path.join(resource_path, 'dataset'))
 
 # Training data
-images, labels = mndata.load_testing()
+images, labels = mndata.load_training()
 images = images
 labels = labels
 # Initialize network
@@ -36,7 +36,7 @@ np.save(os.path.join(cache_path, 'weights.v'), weights)
 
 print "Running test cases ..."
 # Load test data
-# images, labels = mndata.load_testing()
+images, labels = mndata.load_testing()
 trues = 0
 for i in range(len(images)):
     result_vector = network.feed_forward(np.array([images[i]]))
